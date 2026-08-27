@@ -1,0 +1,26 @@
+name: Build Sample Application
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Display Project Files
+        run: ls -la
+
+      - name: Build Application
+        run: echo "Building Sample Application..."
+
+      - name: Run Tests
+        run: echo "Running Tests..."
+
+      - name: Build Successful
+        run: echo "Build Completed Successfully"
